@@ -26,8 +26,8 @@ class AsyncRequest(qt.QThread):
 
     def run(self):
         try:
-            re = session.post(self.url, data=self.data).json()
-            data = re
+            re = session.post(self.url, data=self.data)
+            data = re.json()
         except Exception as e:
             data = {'state': 'err', 'data': str(e)}
         if self.signal:

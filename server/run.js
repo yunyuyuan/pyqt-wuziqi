@@ -21,10 +21,16 @@ app.use(session({secret: 'keyboard cat'}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.use(function (req, res, next) {
+    console.log(req.method + ': ' + req.path);
+    next()
+});
+
 
 // 登录 | 注册
 app.post('/login', (req, res) => {
     try {
+        console.log('enter')
         let type = req.body['type'],
             nick = req.body['nick'],
             act = req.body['act'],

@@ -492,6 +492,7 @@ class BoardLines(qt.QFrame):
                     radial.setColorAt(1, qt.QColor('#C7D1D3'))
                 painter.setBrush(radial)
                 painter.drawEllipse(qt.QPoint(*center), radius, radius)
+            painter.end()
 
 class ChessHover(qt.QLabel):
     def __init__(self, board):

@@ -1,6 +1,6 @@
 {
-    "server": "http://127.0.0.1:16074",
-    "color": "white",
+    "server": "http://127.0.0.7:16074",
+    "color": "dracula",
     "minSize": {
         "home": [
             600,
