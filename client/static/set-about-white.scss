@@ -1,0 +1,37 @@
+.set-about{
+  >.set{
+    >QFrame{
+      margin: 10px 0;
+      QLabel{
+        min-width: 80px;
+        max-width: 80px;
+        font-size: 18px;
+      }
+      QLineEdit{
+        font-size: 15px;
+        padding: 3px 0;
+      }
+      .white, .dracula{
+        max-width: 40px;
+        min-width: 40px;
+        max-height: 40px;
+        min-height: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0 5px;
+        &:hover{
+          border-color: #0d00ff;
+        }
+        &.white{
+          background: white;
+        }
+        &.dracula{
+          background: #2b2b2b;
+        }
+        &[active='t']{
+          border-color: red;
+        }
+      }
+    }
+  }
+}

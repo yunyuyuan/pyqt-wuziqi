@@ -1,0 +1,21 @@
+.pop-dialog{
+  >QLabel{
+    font-size: 15px;
+      padding: 0 5px;
+  }
+  >QPushButton{
+    margin-bottom: 8px;
+    padding: 4px 6px;
+    border: 1px solid gray;
+    color: black;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(255, 255, 255),stop:0.7 rgb(220, 220, 220),stop:1 rgb(210, 210, 200))'};
+    &:hover{
+      background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(220, 220, 220),stop:0.3 rgb(230, 230, 230),stop:1 rgb(255, 255, 255))'};
+    }
+    &:pressed{
+      background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(155, 248, 255),stop:0.5 rgb(125, 240, 220),stop:1 rgb(155, 248, 255))'};
+    }
+  }
+}

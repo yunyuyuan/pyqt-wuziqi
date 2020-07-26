@@ -1,0 +1,279 @@
+@charset "UTF-8";
+#main{
+  background: #f9f9f9;
+}
+QFrame{
+  background: transparent;
+}
+/*
+**  主页
+*/
+#home{
+  /* 左边-账号 */
+  > .player{
+    margin: 0 20px 0 40px;
+    /* 账号登录界面 */
+    > .login{
+      border: 1px solid #6c6c6c;
+      border-radius: 4px;
+      padding: 0 0 5px 0;
+      background: #eeeeee;
+      > .toggle{
+        padding-bottom: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        > QPushButton{
+          font-size: 17px;
+          border: none;
+          padding: 8px 0;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          font-weight: bold;
+          border-bottom: 2px solid #b2b2b2;
+          &.active{
+            background: #2EA44F;
+            color: white;
+            border-bottom: 3px solid #d47500;
+          }
+        }
+      }
+    }
+    /* 账号信息界面 */
+    > .act-info{
+      border: 1px solid #6c6c6c;
+      border-radius: 4px;
+      padding: 0;
+      background: #eeeeee;
+      > .user-info{
+        >.left{
+          >QLabel{
+            border: 1px solid #000000;
+            @at-root #choose-avatar{
+              >.avatar{
+                padding: 0;
+                border: 1px solid black;
+                border-radius: 4px;
+                &:hover{
+                  border-color: #182aff;
+                }
+                &.active{
+                  border: 2px solid red;
+                }
+              }
+            }
+          }
+        }
+      }
+      >QLabel{
+        font-size: 18px;
+      }
+      >QFrame{
+        >.icon-btn{
+          margin: 0 5px;
+          >QFrame>.text{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  /* 右边-房间 */
+  > .room{
+    >.set-about{
+      >QPushButton{
+        font-family: iconfont;
+        padding: 0;
+        font-size: 28px;
+        margin: 0 6px;
+        background: transparent;
+        font-weight: bold;
+        border: none;
+        &:hover{
+          color: #0d00ff;
+        }
+        &:pressed{
+          color: red;
+        }
+      }
+    }
+    >QFrame{
+      > .icon-btn{
+        margin: 8px 0;
+      }
+    }
+  }
+}
+/*
+**  房间列表
+*/
+#rooms{
+  > .head{
+    padding: 5px;
+    background: white;
+    border-top: 1px solid #b9b9b9;
+    border-bottom: 1px solid gray;
+  }
+  > .body{
+    .the-room{
+      background: #d6f7ff;
+      border: 1px solid gray;
+      border-radius: 3px;
+      &:hover{
+        background: #adf3ff;
+        border-color: black;
+      }
+      >.id{
+        font-size: 18px;
+        margin: 3px 0;
+        border-bottom: 1px dashed gray;
+      }
+      > .cover{
+        border: 1px dashed red;
+        margin: 0 3px;
+      }
+      >.nick{
+        font-size: 14px;
+      }
+      >QPushButton{
+        font-size: 16px;
+        padding: 4px 0;
+        border-radius: 2px;
+        border: 1px solid gray;
+        background: #ffdcac;
+        margin: 0 15px 5px 15px;
+        &:hover{
+          background: #ffbc79;
+        }
+      }
+    }
+  }
+  > .turn-page{
+    border-top: 1px solid gray;
+    >QPushButton{
+        font-size: 19px;
+        font-weight: bold;
+        padding: 4px;
+        border-radius: 4px;
+        border: 1px solid gray;
+        background: #6590ff;
+        color: white;
+        margin: 0 5px;
+        &:hover{
+          background: #4c5cff;
+        }
+        &.active{
+          background: #ff6f6f;
+        }
+    }
+  }
+}
+/*
+**  游戏界面
+*/
+#game{
+  >.head{
+    background: white;
+    border-bottom: 1px solid #9e9e9e;
+    padding: 5px;
+    .icon-btn .text{
+      font-size: 14px;
+    }
+  }
+  @at-root .game-head-dialog{
+      QLabel{
+        font-size: 14px;
+        margin: 10px 4px;
+      }
+      QLineEdit{
+        font-size: 16px;
+      }
+      QPushButton{
+        font-size: 15px;
+        margin: 5px 10px;
+      }
+    }
+  >.body{
+    >.chess-board{
+      padding: 20px;
+      background: #d1ad8e;
+    }
+  }
+  >.footer{
+    margin-bottom: 10px;
+    >.player{
+      border: 1px solid #9e9e9e;
+      border-radius: 5px;
+      background: white;
+      &[at='t']{
+        background: #ffd198;
+      }
+      >.base{
+        padding: 4px;
+      }
+      >.game{
+        >.nick{
+          font-size: 15px;
+        }
+        >.game_num,>.win_num{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------- */
+.super-input{
+  padding: 0;
+  >QLineEdit{
+    border: none;
+    background: transparent;
+    padding: 4px;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    >QLabel{
+      background: #0d00ff;
+    }
+  }
+  >QLabel{
+    font-family: iconfont;
+    font-size: 24px;
+    margin: 0 3px 0 0;
+    font-weight: bold;
+    color: #b146ff;
+  }
+}
+
+.icon-btn{
+  >QFrame{
+    border-radius: 3px;
+    > .icon{
+      font-family: iconfont;
+      font-size: 24px;
+      background: transparent;
+      border: none;
+    }
+    > .text{
+      font-size: 18px;
+      background: transparent;
+      border: none;
+      font-weight: bold;
+    }
+  }
+}
+
+
+QPushButton[common-btn]{
+  padding: 4px 6px;
+  border: 1px solid gray;
+  color: black;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(255, 255, 255),stop:0.7 rgb(220, 220, 220),stop:1 rgb(210, 210, 200))'};
+  &:hover{
+    background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(220, 220, 220),stop:0.3 rgb(230, 230, 230),stop:1 rgb(255, 255, 255))'};
+  }
+  &:pressed{
+    background-color: #{'qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(155, 248, 255),stop:0.5 rgb(125, 240, 220),stop:1 rgb(155, 248, 255))'};
+  }
+}

@@ -1,0 +1,30 @@
+.set-about > .set {
+  background: #2b2b2b; }
+  .set-about > .set > QFrame {
+    margin: 10px 0; }
+    .set-about > .set > QFrame QLabel {
+      min-width: 80px;
+      max-width: 80px;
+      font-size: 18px;
+      color: white; }
+    .set-about > .set > QFrame QLineEdit {
+      font-size: 15px;
+      padding: 3px 0; }
+    .set-about > .set > QFrame .white, .set-about > .set > QFrame .dracula {
+      max-width: 40px;
+      min-width: 40px;
+      max-height: 40px;
+      min-height: 40px;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin: 0 5px; }
+      .set-about > .set > QFrame .white:hover, .set-about > .set > QFrame .dracula:hover {
+        border-color: #a5ffeb; }
+      .set-about > .set > QFrame .white.white, .set-about > .set > QFrame .dracula.white {
+        background: white; }
+      .set-about > .set > QFrame .white.dracula, .set-about > .set > QFrame .dracula.dracula {
+        background: #2b2b2b; }
+      .set-about > .set > QFrame .white[active='t'], .set-about > .set > QFrame .dracula[active='t'] {
+        border-color: #ffd086; }
+
+/*# sourceMappingURL=set-about-dracula.css.map */

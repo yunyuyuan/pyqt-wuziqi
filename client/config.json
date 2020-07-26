@@ -1,0 +1,22 @@
+{
+    "server": "http://127.0.0.1:16074",
+    "color": "white",
+    "minSize": {
+        "home": [
+            600,
+            500
+        ],
+        "rooms": [
+            1000,
+            700
+        ],
+        "game": [
+            800,
+            800
+        ]
+    },
+    "database": {
+        "pwd": "111",
+        "db": "gobang"
+    }
+}
